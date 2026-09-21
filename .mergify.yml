@@ -1,0 +1,15 @@
+merge_queue:
+  queue_controls_comment: true
+  mode: serial
+  max_parallel_checks: 1
+queue_rules:
+  - name: vm3-checkbox-authz-260922
+    batch_size: 1
+    max_checks_retries: 0
+    merge_method: merge
+    update_method: merge
+    queue_conditions:
+      - title = VM3 CHECKBOX AUTHZ 260922
+    merge_conditions:
+      - label = VM3_NEVER_MERGE_CHECKBOX_260922
+pull_request_rules: []
