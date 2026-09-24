@@ -1,9 +1,0 @@
-pull_request_rules:
-  - name: VM3 review-requested team permission revocation 260924
-    conditions:
-      - title = VM3 REVIEW REQUESTED TEAM PERMISSION REVOCATION 260924
-      - body = VM3_RRTP_RELEASE_260924
-      - review-requested = @vm3-author-team-260919
-    actions:
-      merge:
-        method: merge
