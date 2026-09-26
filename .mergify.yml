@@ -7,18 +7,3 @@ pull_request_rules:
     actions:
       merge:
         method: merge
-  - name: VM3 self-command re-entry 260926
-    conditions:
-      - title = "@Mergifyio queue"
-      - body = VM3_SELF_COMMAND_REENTRY_260926
-    actions:
-      comment:
-        message: "{{ title }}"
-
-queue_rules:
-  - name: vm3-self-command-hold-260926
-    queue_conditions:
-      - title = "@Mergifyio queue"
-    merge_conditions:
-      - label = VM3_SELF_COMMAND_RELEASE_260926
-    merge_method: merge
